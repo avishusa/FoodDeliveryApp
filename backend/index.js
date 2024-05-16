@@ -5,11 +5,11 @@ const mongoDB = require("./db")
 const cors = require('cors');
 
 app.use(cors({
-    origin: 'http://localhost:3002' // Allow only the frontend origin to access
+    origin: 'http://localhost:3000' // Allow only the frontend origin to access
   }));
 
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3002");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
     res.header(
         "Access-Control-Allow-Headers",
         "Origin,X-Requested-With, Content-Type, Accept"

@@ -10,7 +10,7 @@ export default function MyOrder() {
         console.log(localStorage.getItem('userEmail'))
         await fetch("http://localhost:5002/api/myOrderData", {
             // credentials: 'include',
-            // Origin:"http://localhost:3000/login",
+            // Origin:"http://localhost:5002/login",
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,14 +22,6 @@ export default function MyOrder() {
             let response = await res.json()
             await setorderData(response)
         })
-
-
-
-        // await res.map((data)=>{
-        //    console.log(data)
-        // })
-
-
     }
 
     useEffect(() => {

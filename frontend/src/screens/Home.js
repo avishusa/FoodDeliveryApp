@@ -13,11 +13,10 @@ export default function Home() {
         let response = await fetch("http://localhost:5002/api/foodData", {
             method: "POST",
             headers: {
-                'content-Type': 'application/json'
+                'Content-Type': 'application/json'
             }
         })
         response = await response.json();
-        // console.log(response[0],response[1])
         setFoodItem(response[0])
         setFoodCat(response[1])
     }
