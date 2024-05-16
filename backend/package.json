@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon server"
+    "start": "node index.js"
   },
   "author": "avish",
   "license": "ISC",
