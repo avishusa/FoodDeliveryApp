@@ -3,6 +3,7 @@ const app = express()
 const port = 5002
 const mongoDB = require("./db")
 const cors = require('cors');
+require("dotenv").config();
 
 app.use(cors({
     origin: 'http://localhost:3000' // Allow only the frontend origin to access
