@@ -8,7 +8,7 @@ export default function Signup() {
     const handleSubmit = async (e) => {
 
         e.preventDefault();
-        const response = await fetch("http://localhost:5002/api/creatuser", {
+        const response = await fetch("https://fooddeliveryapp-3f8s.onrender.com/api/creatuser", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

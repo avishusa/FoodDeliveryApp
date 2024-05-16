@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 })
 mongoDB();
 app.get('/', (req, res) => {
-    res.send('Hello World')
+    res.send('The Server is up and running...')
 })
 
 app.use(express.json())
