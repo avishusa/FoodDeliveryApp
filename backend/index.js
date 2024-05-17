@@ -5,18 +5,13 @@ const mongoDB = require("./db")
 const cors = require('cors');
 require("dotenv").config();
 
-app.use(cors({
-    origin: 'http://localhost:3000' // Allow only the frontend origin to access
-  }));
-
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin,X-Requested-With, Content-Type, Accept"
-    );
-    next()
-})
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+});
+
 mongoDB();
 app.get('/', (req, res) => {
     res.send('The Server is up and running...')
