@@ -38,6 +38,7 @@ export default function Card(props) {
             return
         }
         await dispatch({type:'ADD',id:props.foodItem._id, name:props.foodItem.name,price:finalPrice,qty:qty,size:size})
+        alert(`${props.foodItem.name} added to your cart !!`)
 
         
     }
@@ -51,7 +52,7 @@ export default function Card(props) {
                 <img className="card-img-top" style={{ height: '120px', objectFit: "fill" }} src={foodItem.img} alt="Card image cap" />
                 <div className="card-body">
                     <h5 className="card-title">{foodItem.name}</h5>
-                    <div className='container w-100'>
+                    <div hidden={!localStorage.getItem("token")} className='container w-100'>
                         <select className='m-2 h-100 bg-success rounded' onChange={(e)=>setQty(e.target.value)}>
                             {Array.from(Array(6), (e, i) => {
                                 return (
@@ -71,7 +72,7 @@ export default function Card(props) {
                     </div>
                     <hr>
                     </hr>
-                    <button className={`btn btn-success justify-center ms-2 ${isButtonClicked ? 'button-click-animation':""}`} onClick={handleAddToCart}>Add to Cart</button>
+                    <button hidden={!localStorage.getItem("token")} className={`btn btn-success justify-center ms-2 ${isButtonClicked ? 'button-click-animation':""}`} onClick={handleAddToCart}>Add to Cart</button>
                 </div>
             </div>
         </div>

@@ -55,7 +55,11 @@ export default function Home() {
                         <span className="visually-hidden">Next</span>
                     </button></div>
             </div>
+            <div hidden={localStorage.getItem("token")} className='bg-success text-center fs-3 m-3 sm:fs-1 m-0'>
+            <span>Welcome to the Restaurant !! Please Login to order</span>
+            </div>
             <div className='container'>
+            
                 {
                     foodCat.length !== 0
                         ? foodCat.map((data) => {

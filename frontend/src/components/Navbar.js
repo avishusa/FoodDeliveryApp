@@ -28,7 +28,7 @@ export default function Navbar(props) {
             <nav className="navbar navbar-expand-lg navbar-dark bg-success position-sticky"
                 style={{ boxShadow: "0px 10px 20px black", filter: 'blur(20)', position: "fixed", zIndex: "10", width: "100%" }}>
                 <div className="container-fluid">
-                    <Link className="navbar-brand fs-1 fst-italic" to="/">GoFood</Link>
+                    <Link className="navbar-brand fs-1 fst-italic" to="/">Restaurant</Link>
                     <button  onClick={handlebutton} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={check} aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -42,7 +42,6 @@ export default function Navbar(props) {
                                     <Link className="nav-link fs-5 mx-3 active" aria-current="page" to="/myorder" >My Orders</Link>  {/* index.css - nav-link color white */}
                                 </li> : ""}
                         </ul>
-                        {console.log(localStorage.getItem("token"))}
                         {(!localStorage.getItem("token")) ?
                             <form className="d-flex">
                                 <Link className="btn bg-white text-success mx-1 " to="/login">Login</Link>
