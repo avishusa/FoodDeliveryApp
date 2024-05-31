@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 export default function Login() {
   let navigate = useNavigate();
@@ -22,7 +23,7 @@ export default function Login() {
     }
     if (json.success) {
       localStorage.setItem("userEmail",credentails.email);
-      localStorage.setItem("authToken",json.authToken);
+      localStorage.setItem("token",json.authToken);
       console.log(localStorage.getItem("authToken"))
       navigate('/');
 
@@ -34,7 +35,8 @@ export default function Login() {
   }
   return (
     <div>
-      <div className='container'>
+       <div>   <Navbar /> </div>
+      <div className='container mt-3'>
         <form onSubmit={handleSubmit}>
 
           <div className="mb-3">

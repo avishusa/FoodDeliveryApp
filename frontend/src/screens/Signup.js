@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Navbar from '../components/Navbar'
 
 export default function Signup() {
     const navigate=useNavigate()
@@ -32,7 +33,8 @@ export default function Signup() {
     
     return (
         <div>
-            <div className='container'>
+             <div>   <Navbar /> </div>
+            <div className='container mt-3'>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label htmlFor="name" className="form-label" >Name</label>
