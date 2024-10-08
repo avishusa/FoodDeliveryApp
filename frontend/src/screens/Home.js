@@ -37,13 +37,13 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="carousel-item active">
-                            <img src="https://source.unsplash.com/random/900x700/?sandwich" className="d-block w-100" alt="..." />
+                            <img src="https://dummyimage.com/900x200/000/fff&text=Biryani" className="d-block w-100" alt="..." />
                         </div>
                         <div className="carousel-item">
-                            <img src="https://source.unsplash.com/random/900x700/?pizza" className="d-block w-100" alt="..." />
+                            <img src="https://dummyimage.com/900x200/000/fff&text=pizza" className="d-block w-100" alt="..." />
                         </div>
                         <div className="carousel-item">
-                            <img src="https://source.unsplash.com/random/900x700/?burger" className="d-block w-100" alt="..." />
+                            <img src="https://dummyimage.com/900x200/000/fff&text=Starters" className="d-block w-100" alt="..." />
                         </div>
                     </div>
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
